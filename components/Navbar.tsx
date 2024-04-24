@@ -9,6 +9,7 @@ import { UserButton } from "@clerk/nextjs";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const font=Poppins({
     weight:"600",
@@ -17,7 +18,7 @@ const font=Poppins({
 
 export const Navbar = () =>{
     return(
-        <div className="fixed w-full z-50 flex justify-between items-center py-2 px-4 border-b border-primary/10 bg-secondary">
+        <div className="fixed w-full z-50 flex justify-between items-center py-2 px-4 border-b border-primary/10 bg-secondary h-16">
             <div className="flex items-center">
                 <Menu className="block md:hidden"></Menu>
                 <Link href={"/"}>
@@ -25,10 +26,11 @@ export const Navbar = () =>{
                 </Link>
             </div>
             <div className="flex items-center gap-x-3">
-                <Button size="sm">
+                <Button variant="premium" size="sm">
                     Upgrade
                     <Sparkle className="h-4 w-4 fill-white text-white ml-2"/>
                 </Button>
+                <ModeToggle/>
                 <UserButton/>
             </div>
         </div>

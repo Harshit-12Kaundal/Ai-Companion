@@ -1,13 +1,9 @@
-1.one way data binding
-2.virtual dom
-3.simplicity
-4.
+#include<iostream>
+using namespace std;
 
-
-disadvantage
-
-1.viewpart
-2.jsx as a barrier
-3.search engine optimization
-4. the benifit of having javascript liberary 
-5. scope for testing the codes
+int main(){
+string x;
+cin>>x;
+cout<<x;
+return 0;
+}
